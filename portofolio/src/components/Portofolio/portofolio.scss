@@ -1,0 +1,49 @@
+@use "../../assets/scss/fonts/quicksandfonts";
+@use "../../assets/scss/components/_card.scss" as card;
+
+section {
+  .v-card {
+    @include card.redCard;
+
+    header {
+      .section-image {
+        .v-card-title {
+          font-size: 35px !important;
+          font-family: 'QuickSand', sans-serif;
+        }
+
+        .img-section {
+          height: 100px !important;
+        }
+
+        .section-text {
+          transform: rotate(-3deg);
+
+          .parallelogram {
+            width: 110px;
+            height: 30px;
+            background-color: #D50846;
+            transform: skew(-20deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .text {
+            transform: skew(20deg);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p {
+        color: #625C5C !important;
+      }
+    }
+
+  }
+
+
+}

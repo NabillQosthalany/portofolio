@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "QuickSand";
+  font-style: normal;
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap");
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+}
+.main-content-text {
+  margin-top: 25vh;
+}
+.main-content-text .name-text {
+  font-family: "QuickSand", sans-serif;
+  font-weight: 400;
+  color: #08D5B2;
+}
+.main-content-text h3 {
+  font-family: "QuickSand", sans-serif;
+  font-weight: 500;
+  color: #000;
+}
+.main-content-text .skills-text {
+  font-family: "QuickSand", sans-serif;
+  font-weight: 400;
+  color: #7E7B7B;
+  opacity: 40%;
+}
+
+.main-content-image {
+  width: 418px !important;
+}
+
+@media only screen and (max-width: 430px) {
+  .main-content-text {
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+  }
+  .main-content-text .name-text {
+    font-size: 25px !important;
+  }
+  .main-content-text h1 {
+    font-size: 20px !important;
+    text-align: center;
+    padding: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=profile.css.map */

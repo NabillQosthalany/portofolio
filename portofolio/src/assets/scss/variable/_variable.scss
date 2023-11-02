@@ -1,0 +1,41 @@
+$cyan-color: #08D5B2;
+$gray-color: #7E7B7B;
+$white-color: #ffff;
+$dark-color: #262B3D;
+$dark-color-secondary: #333;
+
+@mixin dark-mode() {
+  background-color: $dark-color;
+  color: $white-color;
+}
+
+@mixin light-mode() {
+  background-color: $white-color;
+  color: $dark-color-secondary;
+}
+
+@mixin font-light-mode() {
+  color: $dark-color;
+}
+
+@mixin font-dark-mode() {
+  color: $white-color;
+}
+
+$dark-mode-class: 'dark-mode';
+$light-mode-class: 'light-mode';
+
+$breakpoints: (
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+@mixin media($size) {
+  $width: map-get($breakpoints, $size);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+

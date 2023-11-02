@@ -1,0 +1,8 @@
+section .v-container .v-row .v-col .v-form .v-btn {
+  color: white !important;
+}
+section .v-container .v-row .contact-img {
+  width: 100px !important;
+}
+
+/*# sourceMappingURL=contact.css.map */

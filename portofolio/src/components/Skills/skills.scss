@@ -1,0 +1,52 @@
+@use "../../assets/scss/fonts/quicksandfonts";
+@use "../../assets/scss/components/_card.scss" as card;
+
+section {
+  .v-card {
+    @include card.blueCard;
+
+    .v-card-title {
+      color: #ffff !important;
+      font-family: 'QuickSand', sans-serif;
+      font-size: 45px;
+    }
+
+    .v-card-subtitle {
+      font-family: 'QuickSand', sans-serif;
+      font-size: 17px;
+    }
+
+    .skills-image {
+      width: 100px;
+      margin-top: 20px !important;
+
+      @keyframes moveUpDown {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      img {
+        transition: 0.3s ease-in-out;
+      }
+
+      &:hover {
+        animation: moveUpDown 2s infinite alternate;
+        transform: scale(1.1);
+        filter: brightness(1.1);
+      }
+
+      .animated-image {
+        filter: grayscale(100%);
+        transition: 1s;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}

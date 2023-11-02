@@ -1,0 +1,20 @@
+@mixin blueCard() {
+  border: 2px solid #1daf98;
+  background: linear-gradient(to bottom right, #89dbcd, #ffff);
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+@mixin redCard() {
+  border: 2px solid #da0b3e;
+  background: linear-gradient(to bottom right, #e37272, #ffff);
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+@mixin aboutCard() {
+  border: 2px solid #34CFB6;
+  background: linear-gradient(to bottom right, #B5DFD8, #3F5753);
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}

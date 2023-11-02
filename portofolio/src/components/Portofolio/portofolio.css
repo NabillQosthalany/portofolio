@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "QuickSand";
+  font-style: normal;
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap");
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+}
+@font-face {
+  font-family: "QuickSand";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+}
+section .v-card {
+  border: 2px solid #da0b3e;
+  background: linear-gradient(to bottom right, #e37272, white);
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+section .v-card header .section-image .v-card-title {
+  font-size: 35px !important;
+  font-family: "QuickSand", sans-serif;
+}
+section .v-card header .section-image .img-section {
+  height: 100px !important;
+}
+section .v-card header .section-image .section-text {
+  transform: rotate(-3deg);
+}
+section .v-card header .section-image .section-text .parallelogram {
+  width: 110px;
+  height: 30px;
+  background-color: #D50846;
+  transform: skew(-20deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .v-card header .section-image .section-text .text {
+  transform: skew(20deg);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+section .v-card header p {
+  color: #625C5C !important;
+}
+
+/*# sourceMappingURL=portofolio.css.map */
