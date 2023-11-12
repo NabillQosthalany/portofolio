@@ -133,7 +133,7 @@ export default {
               <img
                 class="w-8"
                 :src="
-                  isDarkMode ? 'images/sun-light.png' : 'images/dark-mode.png'
+                  isDarkMode ? '/images/sun-light.png' : '/images/dark-mode.png'
                 "
                 alt=""
               />

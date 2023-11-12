@@ -27,7 +27,7 @@ export default {
       ></div>
       <img
         class="ml-2 w-6 h-6"
-        :src="isDarkMode ? 'images/moon-light.png' : 'images/dark-mode.png'"
+        :src="isDarkMode ? '/images/moon-light.png' : '/images/dark-mode.png'"
         alt=""
         srcset=""
       />

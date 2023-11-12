@@ -3,17 +3,17 @@ export default {
   data() {
     return {
       images: [
-        { id: 1, image: "images/html-logo.png" },
-        { id: 2, image: "images/css-logo.png" },
-        { id: 3, image: "images/scss-logo.png" },
-        { id: 4, image: "images/boostrap-logo.png" },
-        { id: 5, image: "images/vuetify-logo.png" },
-        { id: 6, image: "images/vuejs-logo.png" },
-        { id: 7, image: "images/nuxtjs-logo.png" },
-        { id: 8, image: "images/reactjs-logo.png" },
-        { id: 9, image: "images/mongodb-logo.png" },
-        { id: 10, image: "images/mysql-logo.png" },
-        { id: 11, image: "images/expressjs-logo.png" },
+        { id: 1, image: "/images/html-logo.png" },
+        { id: 2, image: "/images/css-logo.png" },
+        { id: 3, image: "/images/scss-logo.png" },
+        { id: 4, image: "/images/boostrap-logo.png" },
+        { id: 5, image: "/images/vuetify-logo.png" },
+        { id: 6, image: "/images/vuejs-logo.png" },
+        { id: 7, image: "/images/nuxtjs-logo.png" },
+        { id: 8, image: "/images/reactjs-logo.png" },
+        { id: 9, image: "/images/mongodb-logo.png" },
+        { id: 10, image: "/images/mysql-logo.png" },
+        { id: 11, image: "/images/expressjs-logo.png" },
       ],
     };
   },
