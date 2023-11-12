@@ -77,7 +77,7 @@ export default {
         <img
           v-show="item.isHover || item.isButtonHover"
           class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          src="/images/github-logo.png"
+          src="/images/github-logo.jpg"
           alt=""
         />
         <button
@@ -111,7 +111,7 @@ export default {
                   :key="index"
                   class="w-6 h-6 mx-1 box-border"
                   :class="[
-                    image === 'images/tailwind-logo.png' ? 'w-8 h-5' : '',
+                    image === '/images/tailwind-logo.png' ? 'w-8 h-5' : '',
                   ]"
                   :src="image"
                   alt=""
