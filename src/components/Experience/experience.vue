@@ -1,45 +1,66 @@
-<script setup>
+<script>
 import { ref } from "vue";
-import LineRounded from "../Experience/LineRounded/index.vue";
+import LineRounded from "../Experience/LineRounded/linerounded.vue";
 
 const isTabs = ref(true);
 
-const experience = ref([
-  {
-    isTabs: true,
-    name: "PT Indonesia Indicator",
-    title:
-      "Field Work Practice Becoming a web developer,<br/> using Spring Boot and Vue Js Technology",
-    duration: "July - December 2022",
-    classCustom: "absolute right-10 top-0",
+export default {
+  components: {
+    LineRounded,
   },
-  {
-    isTabs: true,
-    name: "PP Pemuda Persis",
-    title: "Become a volunteer, and use Laravel Technology",
-    duration: "September - Now",
-    classCustom: "absolute left-10 top-0",
+  data() {
+    return {
+      isTabs: true,
+      experience: [
+        {
+          isTabs: true,
+          name: "PT Indonesia Indicator",
+          title:
+            "Field Work Practice Becoming a web developer,<br/> using Spring Boot and Vue Js Technology",
+          duration: "July - December 2022",
+          classCustom: "absolute right-10 top-0",
+        },
+        {
+          isTabs: true,
+          name: "PP Pemuda Persis",
+          title: "Become a volunteer, and use Laravel Technology",
+          duration: "September - Now",
+          classCustom: "absolute left-10 top-0",
+        },
+        {
+          isTabs: false,
+          name: "Majelis <br/> Permusyawaratan <br/>  Kelas (MPK)",
+          title: "Become chairman of Commission 4",
+          duration: "November 2021 - Maret 2023",
+          classCustom: "absolute left-10 top-0",
+        },
+      ],
+    };
   },
-  {
-    isTabs: false,
-    name: "Majelis Permusyawaratan Kelas (MPK)",
-    title:
-      "Field Work Practice Becoming a web developer,<br/> using Spring Boot and Vue Js Technology",
-    duration: "November 2021 - January 2023",
-    classCustom: "absolute right-10 top-0",
+  methods: {
+    scrollToSection() {
+      const yOffset = -150;
+      const element = this.$refs.sectionRef;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    },
+    toggleTab(isWork) {
+      this.isTabs = isWork;
+    },
   },
-]);
-
-const toggleTab = (isWork) => {
-  isTabs.value = isWork;
 };
 </script>
 <template>
-  <section class="mt-40" ref="sectionRef">
-    <h1 class="text-center text-3xl font-semibold">Experience</h1>
+  <section data-aos="fade-in" class="md:mt-40 mt-24" ref="sectionRef">
+    <h1
+      class="text-center md:text-3xl text-2xl font-semibold text-black dark:text-white"
+    >
+      Experience
+    </h1>
     <div class="flex justify-center">
       <ul
-        class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+        class="flex md:flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
       >
         <li class="mr-2">
           <a

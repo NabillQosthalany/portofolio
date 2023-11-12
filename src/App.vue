@@ -1,7 +1,12 @@
 
 <template>
   <div>
-    <Navbar :activeSection="activeSection" @goToSection="handleGoToSection" />
+    <Navbar
+      :active-section-ref="activeSection"
+      @scrollToSection="scrollToSection"
+      @toggle-dark-mode="toggleDarkMode"
+      :isDarkMode="isDarkMode"
+    />
 
     <Hero ref="heroSection" />
     <About ref="aboutSection" />
@@ -9,54 +14,77 @@
     <Skill ref="skillSection" />
     <Certificate ref="certificateSection" />
     <Portofolio ref="portofolioSection" />
+    <Sfooter />
   </div>
 </template>
 
-<script setup>
-import Navbar from "./components/Navbar/index.vue";
-import Hero from "./components/Hero/index.vue";
-import About from "./components/About/index.vue";
-import Experience from "./components/Experience/index.vue";
-import Skill from "./components/Skill/index.vue";
-import Certificate from "./components/Certificate/index.vue";
-import Portofolio from "./components/Portofolio/index.vue";
-import { onBeforeUnmount, onMounted, ref } from "vue";
+<script>
+import Navbar from "./components/Navbar/navbar.vue";
+import Hero from "./components/Hero/hero.vue";
+import About from "./components/About/about.vue";
+import Experience from "./components/Experience/experience.vue";
+import Skill from "./components/Skill/skill.vue";
+import Certificate from "./components/Certificate/certificate.vue";
+import Portofolio from "./components/Portofolio/portofolio.vue";
+import Sfooter from "./components/Footer/Sfooter.vue";
 
-const activeSection = ref(null);
+export default {
+  components: {
+    Navbar,
+    Hero,
+    About,
+    Experience,
+    Skill,
+    Certificate,
+    Portofolio,
+    Sfooter,
+  },
+  data() {
+    return {
+      activeSection: null,
+      isDarkMode: false,
+    };
+  },
 
-const handleGoToSection = (sectionRef) => {
-  activeSection.value = sectionRef;
-  const sectionEl = document.getElementById(sectionRef);
-  if (sectionEl) {
-    sectionEl.scrollIntoView({ behavior: "smooth" });
-  }
-};
-const handleScroll = () => {
-  for (const sectionRef of [
-    "heroSection",
-    "aboutSection",
-    "experienceSection",
-    "skillSection",
-    "certificateSection",
-    "portofolioSection",
-  ]) {
-    const sectionEl = document.getElementById(sectionRef);
-    if (sectionEl) {
-      const rect = sectionEl.getBoundingClientRect();
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    toggleDarkMode() {
+      const body = document.querySelector("body");
+      this.isDarkMode = !this.isDarkMode;
+      body.classList.toggle("light");
+      body.classList.toggle("dark");
+    },
+    scrollToSection(sectionRef) {
+      this.$refs[sectionRef].scrollToSection();
+    },
 
-      if (rect.top >= 0.984375 && rect.bottom <= window.innerHeight) {
-        activeSection.value = sectionRef;
-        break;
+    handleScroll() {
+      const isMobileDevice = window.matchMedia("(max-width: 767px)").matches;
+      if (isMobileDevice) {
+        return;
       }
-    }
-  }
+      for (const sectionRef of [
+        "heroSection",
+        "aboutSection",
+        "skillSection",
+        "experienceSection",
+        "certificateSection",
+        "portofolioSection",
+      ]) {
+        const sectionEl = this.$refs[sectionRef].$el;
+        const rect = sectionEl.getBoundingClientRect();
+
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          this.activeSection = sectionRef;
+          break;
+        }
+      }
+    },
+  },
 };
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>

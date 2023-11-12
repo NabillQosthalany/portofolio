@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "node-sass": "^9.0.0",
     "volar-service-vetur": "^0.0.17",
     "vue": "^3.3.4"
   },
@@ -17,7 +19,6 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
-    "vite": "^4.4.5",
-    "vite-plugin-vuetify": "^1.0.2"
+    "vite": "^4.4.5"
   }
 }
