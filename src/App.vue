@@ -64,10 +64,6 @@ export default {
     },
 
     handleScroll() {
-      const isMobileDevice = window.matchMedia("(max-width: 767px)").matches;
-      if (isMobileDevice) {
-        return;
-      }
       for (const sectionRef of [
         "heroSection",
         "aboutSection",
@@ -79,7 +75,7 @@ export default {
         const sectionEl = this.$refs[sectionRef].$el;
         const rect = sectionEl.getBoundingClientRect();
 
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        if (rect.bottom >= 0 && rect.top <= window.innerHeight) {
           this.activeSection = sectionRef;
           break;
         }

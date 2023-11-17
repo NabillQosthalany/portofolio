@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-  <section data-aos="fade-left" ref="sectionRef" class="md:mt-40 mt-24">
+  <section data-aos="fade-in" ref="sectionRef" class="md:mt-40 mt-24">
     <h1 class="text-center text-3xl font-medium">Certficate</h1>
     <div class="flex justify-center">
       <div class="grid grid-cols-2 md:grid-cols-3 grap-4 mt-5">

@@ -13,6 +13,7 @@ export default {
           images: ["images/Vue-logo.png", "images/tailwind-logo.png"],
           isHover: false,
           isButtonHover: false,
+          link: "https://github.com/NabillQosthalany/zullkit-frontend",
         },
         {
           id: 2,
@@ -25,6 +26,7 @@ export default {
           ],
           isHover: false,
           isButtonHover: false,
+          link: "https://github.com/NabillQosthalany/Semina-Event-Fe",
         },
         {
           id: 3,
@@ -37,6 +39,20 @@ export default {
           ],
           isHover: false,
           isButtonHover: false,
+          link: "https://github.com/NabillQosthalany/CrowdFunding-Fe",
+        },
+        {
+          id: 4,
+          name: "PowerHuman",
+          headerImage: "images/images(4).jpeg",
+          images: [
+            "images/nuxtjs-logo.png",
+            "images/laravel-logo.png",
+            "images/mysql-logo-mini.png",
+          ],
+          isHover: false,
+          isButtonHover: false,
+          link: "https://github.com/NabillQosthalany/PowerHuman-Fe",
         },
       ],
     };
@@ -50,6 +66,9 @@ export default {
         top: this.$refs.sectionRef.offsetTop,
         behavior: "smooth",
       });
+    },
+    redirectToGithub(link) {
+      window.open(link, "_blank");
     },
   },
 };
@@ -77,10 +96,11 @@ export default {
         <img
           v-show="item.isHover || item.isButtonHover"
           class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          src="/images/github-logo.jpg"
+          src="/images/githublogo.png"
           alt=""
         />
         <button
+          @click="redirectToGithub(item.link)"
           v-show="item.isHover || item.isButtonHover"
           type="button"
           class="z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-primary hover:bg-[#08A88D] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
