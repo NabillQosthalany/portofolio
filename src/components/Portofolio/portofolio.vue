@@ -1,11 +1,8 @@
 <script>
-import githubLogo from "/images/githublogo.png";
-
 export default {
   name: "Portofolio",
   data() {
     return {
-      githubLogo: githubLogo,
       items: [
         {
           id: 1,
@@ -15,6 +12,7 @@ export default {
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/zullkit-frontend",
+          github: "images/githublogo.png",
         },
         {
           id: 2,
@@ -28,6 +26,7 @@ export default {
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/Semina-Event-Fe",
+          github: "images/githublogo.png",
         },
         {
           id: 3,
@@ -41,6 +40,7 @@ export default {
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/CrowdFunding-Fe",
+          github: "images/githublogo.png",
         },
         {
           id: 4,
@@ -54,6 +54,7 @@ export default {
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/PowerHuman-Fe",
+          github: "images/githublogo.png",
         },
       ],
     };
@@ -97,7 +98,7 @@ export default {
         <img
           v-show="item.isHover || item.isButtonHover"
           class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          :src="githubLogo"
+          :src="item.github"
           alt=""
         />
         <button
