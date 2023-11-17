@@ -1,5 +1,5 @@
 <script>
-import githubLogo from "images/githublogo.png";
+import githubLogo from "@/assets/images/githublogo.png";
 
 export default {
   name: "Portofolio",
