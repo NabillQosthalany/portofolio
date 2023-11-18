@@ -7,54 +7,54 @@ export default {
         {
           id: 1,
           name: "Zullkit Design Apps",
-          headerImage: "images/images(1).jpeg",
+          headerImage: "/images/images(1).jpeg",
           images: ["images/Vue-logo.png", "images/tailwind-logo.png"],
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/zullkit-frontend",
-          github: "images/githublogo.png",
+          github: "/images/githublogo.png",
         },
         {
           id: 2,
           name: "Website Event",
-          headerImage: "images/images(2).jpeg",
+          headerImage: "/images/images(2).jpeg",
           images: [
-            "images/react-logo.png",
-            "images/express-logo.png",
-            "images/mongodb-logo.png",
+            "/images/react-logo.png",
+            "/images/express-logo.png",
+            "/images/mongodb-logo.png",
           ],
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/Semina-Event-Fe",
-          github: "images/githublogo.png",
+          github: "/images/githublogo.png",
         },
         {
           id: 3,
           name: "Website Crowfunding",
-          headerImage: "images/images(3).jpeg",
+          headerImage: "/images/images(3).jpeg",
           images: [
-            "images/nuxtjs-logo.png",
-            "images/golang-logo.png",
-            "images/mysql-logo-mini.png",
+            "/images/nuxtjs-logo.png",
+            "/images/golang-logo.png",
+            "/images/mysql-logo-mini.png",
           ],
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/CrowdFunding-Fe",
-          github: "images/githublogo.png",
+          github: "/images/githublogo.png",
         },
         {
           id: 4,
           name: "PowerHuman",
-          headerImage: "images/images(4).jpeg",
+          headerImage: "/images/images(4).jpeg",
           images: [
-            "images/nuxtjs-logo.png",
-            "images/laravel-logo.png",
-            "images/mysql-logo-mini.png",
+            "/images/nuxtjs-logo.png",
+            "/images/laravel-logo.png",
+            "/images/mysql-logo-mini.png",
           ],
           isHover: false,
           isButtonHover: false,
           link: "https://github.com/NabillQosthalany/PowerHuman-Fe",
-          github: "images/githublogo.png",
+          github: "/images/githublogo.png",
         },
       ],
     };
@@ -98,7 +98,7 @@ export default {
         <img
           v-show="item.isHover || item.isButtonHover"
           class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          :src="item.github"
+          src="/images/githublogo.png"
           alt=""
         />
         <button
