@@ -88,12 +88,6 @@ export default {
     <div
       class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 md:px-40 px-5"
     >
-      <img
-        v-show="item.isHover || item.isButtonHover"
-        class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        src="/images/mongo-logo.png"
-        alt=""
-      />
       <div
         @mouseover="item.isHover = true"
         @mouseout="item.isHover = false"
@@ -101,6 +95,12 @@ export default {
         :key="item.id"
         class="max-w-sm rounded-lg overflow-hidden shadow-lg relative"
       >
+        <img
+          v-show="item.isHover || item.isButtonHover"
+          class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          :src="'/images/githublogo.png'"
+          alt=""
+        />
         <button
           @click="redirectToGithub(item.link)"
           v-show="item.isHover || item.isButtonHover"
