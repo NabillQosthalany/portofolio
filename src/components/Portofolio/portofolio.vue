@@ -98,6 +98,7 @@ export default {
         <img
           v-show="item.isHover || item.isButtonHover"
           class="z-50 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          src="/images/githublogo.webp"
           alt=""
         />
         <button
